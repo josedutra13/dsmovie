@@ -1,4 +1,5 @@
 import MovieScore from "components/MovieScore";
+import { Link } from "react-router-dom";
 
 function MovieCard() {
     const movie = {
@@ -9,35 +10,17 @@ function MovieCard() {
         score: 4.5
     };
     return (
-        <div className="container">
-            <div className="row">
-
-                <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                    <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
-                    <div className="dsmovie-card-bottom-container">
-                        <h3>{movie.title}</h3>
-                        <MovieScore />
-                        <div className="btn btn-primary dsmovie-btn">Avaliar</div>
+        <div >
+            <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
+            <div className="dsmovie-card-bottom-container">
+                <h3>{movie.title}</h3>
+                <MovieScore />
+                <Link to={`form/${movie.id}`}>
+                    <div className="btn btn-primary dsmovie-btn">
+                        Avaliar
                     </div>
-                </div>
+                </Link>
 
-                <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                    <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
-                    <div className="dsmovie-card-bottom-container">
-                        <h3>{movie.title}</h3>
-                        <MovieScore />
-                        <div className="btn btn-primary dsmovie-btn">Avaliar</div>
-                    </div>
-                </div>
-
-                <div className="col-sm-6 col-lg-4 col-xl-3 mb-3">
-                    <img className="dsmovie-movie-card-image" src={movie.image} alt={movie.title} />
-                    <div className="dsmovie-card-bottom-container">
-                        <h3>{movie.title}</h3>
-                        <MovieScore />
-                        <div className="btn btn-primary dsmovie-btn">Avaliar</div>
-                    </div>
-                </div>
             </div>
         </div>
 
