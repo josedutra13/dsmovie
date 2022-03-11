@@ -8,7 +8,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode
 @Entity
 @Table(name= "tb_score")
 public class Score {

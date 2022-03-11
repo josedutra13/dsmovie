@@ -10,7 +10,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode
 @Embeddable
 public class ScorePK implements Serializable {
     @ManyToOne
