@@ -13,6 +13,7 @@ function FormCard({movieId}: Props ) {
 
     const [movie, setMovie] = useState<Movie>();
     
+    //Buscar filmes por id
     useEffect(()=> {
         axios.get(`${BASE_URL}/movies/${movieId}`).then( response =>
             setMovie(response.data)
